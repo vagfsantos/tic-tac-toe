@@ -1,6 +1,71 @@
 module.exports = function(grunt){
 	grunt.initConfig({
-		
+		clean: {
+			build:{
+				src: 'www/'
+			}
+		},
+
+		copy: {
+			html:{
+				expand: true,
+				cwd: 'src',
+				src: '*.html',
+				dest: 'build/'
+			}
+		},
+
+
+		jasmine: {
+		    pivotal: {
+		      	src: 'src/js/src/**/*.js',
+		      	options: {
+		        	specs: 'src/js/spec/*Spec.js',
+		        	helpers: 'src/js/spec/*Helper.js'
+		      	}
+		    }
+		},
+
+		concat: {
+		    dist: {
+	          	src: 'src/js/src/**/*.js',
+	          	dest: 'build/js/app.js'
+		    },
+		},
+
+		uglify: {
+			build: {
+		      	files: [{
+		          	expand: true,
+		          	cwd: 'build/js/',
+		          	src: '**/*.js',
+		          	dest: 'build/js/',
+		          	ext: '.min.js'
+		      	}]
+		    }
+		},
+
+		usemin: {
+		  html: 'build/index.html'
+		},
+
+		watch: {
+			test: {
+			    files: 'src/js/**/*.js',
+			    tasks: ['jasmine'],
+			    options: {
+			      	event: ['added', 'deleted', 'changed'],
+			    }
+			},
+
+			scripts: {
+				files: 'src/js/src/**/*.js',
+				tasks: ['concat', 'uglify', 'copy'],
+				options: {
+				  	event: ['added', 'deleted', 'changed'],
+				}
+			}
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
@@ -9,4 +74,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-usemin');
+
+	grunt.registerTask('default', ['clean', 'copy',  'jasmine', 'usemin', 'uglify', 'concat']);
 }
