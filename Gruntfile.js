@@ -77,5 +77,5 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-usemin');
 
-	grunt.registerTask('default', ['clean', 'copy',  'jasmine', 'usemin', 'uglify', 'concat']);
+	grunt.registerTask('default', ['clean', 'copy',  'jasmine', 'usemin', 'uglify', 'concat', 'watch']);
 }
