@@ -1,0 +1,601 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scroll",
+				"scrollY"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"preco",
+				"precoFinal"
+			],
+			[
+				"lsty",
+				"list-style"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"color",
+				"colorNeutro"
+			],
+			[
+				"t",
+				"t-text-color--light"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"link",
+				"linkBuy"
+			],
+			[
+				"price",
+				"priceOld"
+			],
+			[
+				"t-te",
+				"t-text--thin"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"re",
+				"removeHelperComplement"
+			],
+			[
+				"borderr",
+				"border-radius"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"t-tex",
+				"t-text-color--main"
+			],
+			[
+				"t-bg",
+				"t-bg-color--light"
+			],
+			[
+				"text-c",
+				"t-text-color--main"
+			],
+			[
+				"is--",
+				"is--hidden"
+			],
+			[
+				"t-text-",
+				"t-text--uppercase"
+			],
+			[
+				"text",
+				"t-text-color--main"
+			],
+			[
+				"t-bg-",
+				"t-bg-color--main"
+			],
+			[
+				"m",
+				"m-header__logo"
+			],
+			[
+				"t-text",
+				"t-text-color--main"
+			],
+			[
+				"pois",
+				"positionY"
+			],
+			[
+				"posi",
+				"positionX"
+			],
+			[
+				"mo",
+				"moveOffsetX"
+			],
+			[
+				"off",
+				"offsetX"
+			],
+			[
+				"my",
+				"myX"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.html",
+			"settings":
+			{
+				"buffer_size": 545,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tests/spec/TestSpec.js",
+			"settings":
+			{
+				"buffer_size": 100,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/Test.js",
+			"settings":
+			{
+				"buffer_size": 29,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/_PROJETOS/tic-tac-toe",
+		"/D/_PROJETOS/tic-tac-toe/src",
+		"/D/_PROJETOS/tic-tac-toe/src/js",
+		"/D/_PROJETOS/tic-tac-toe/tests",
+		"/D/_PROJETOS/tic-tac-toe/tests/spec"
+	],
+	"file_history":
+	[
+		"/D/_PROJETOS/tic-tac-toe/Gruntfile.js",
+		"/D/_PROJETOS/vagfsantos.github.io/Gruntfile.js",
+		"/D/_PROJETOS/tic-tac-toe/src/index.html",
+		"/D/_PROJETOS/tic-tac-toe/src/js/src/Test2.js",
+		"/D/_PROJETOS/tic-tac-toe/build/index.html",
+		"/D/_PROJETOS/tic-tac-toe/.gitignore",
+		"/D/_PROJETOS/dayly-task/Gruntfile.js",
+		"/D/_PROJETOS/tic-tac-toe/src/js/src/Test.js",
+		"/D/_PROJETOS/tic-tac-toe/src/js/specs/TestSpec.js",
+		"/D/_PROJETOS/tic-tac-toe/_SpecRunner.html",
+		"/D/_PROJETOS/dayly-task/dev/scss/teste.scss",
+		"/D/_PROJETOS/dayly-task/dev/scss/materialize.scss",
+		"/D/_PROJETOS/dayly-task/dev",
+		"/D/_PROJETOS/daily-task/Gruntfile.js",
+		"/D/_PROJETOS/JavaScript-playground/DOM/Final/_/js/myscript.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/spec/PacienteBuilder.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/spec/ConsultaSpec.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/spec/PacienteSpec.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/src/Paciente.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/SpecRunner.html",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/src/Consulta.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/src/Agendamento.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/spec/AgendamentoSpec.js",
+		"/D/_PROJETOS/vagfsantos.github.io/.gitignore",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/src/PacienteBuilder.js",
+		"/D/_PROJETOS/JavaScript-playground/Jasmine/teste.html",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-desktop-produto-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-desktop-geral-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/theme/_theme.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/theme/_theme.scss",
+		"/D/FREELAS/mservice/src/assets/js/desktop/enext-desktop-produto-mservice.js",
+		"/D/FREELAS/mservice/src/assets/js/mobile/enext-mobile-produto-mservice.js",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/enext-mobile-produto-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/module/_shelf-item.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/module/_shelf-item.scss",
+		"/D/FREELAS/mservice/src/assets/html/desktop/produto-desktop.html",
+		"/D/FREELAS/mservice/src/assets/html/mobile/__footer-mobile.html",
+		"/D/FREELAS/mservice/src/assets/html/desktop/__footer-desktop.html",
+		"/D/FREELAS/mservice/src/assets/html/mobile/__header-mobile.html",
+		"/D/FREELAS/mservice/src/assets/html/desktop/__header-desktop.html",
+		"/D/FREELAS/mservice/src/assets/js/desktop/enext-desktop-geral-mservice.js",
+		"/D/FREELAS/mservice/src/assets/html/desktop/busca-vazia-desktop.html",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-desktop-busca-vazia-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-desktop-categoria-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/module/_shelf-slick.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-desktop-home-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/html/mobile/produto-mobile.html",
+		"/D/FREELAS/mservice/src/assets/js/mobile/enext-mobile-minicart-mservice.js",
+		"/D/FREELAS/mservice/src/assets/js/mobile/enext-mobile-geral-mservice.js",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/module/_minicart.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/layout/_header.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/module/_export.scss",
+		"/D/FREELAS/mservice/src/assets/js/mobile/enext-mobile-home-mservice.js",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/layout/_footer.scss",
+		"/D/FREELAS/mservice/src/assets/js/desktop/enext-desktop-categoria-mservice.js",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/layout/_generic.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/enext-mobile-home-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/module/_newsletter.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/module/_shelf-slick.scss",
+		"/D/FREELAS/mservice/src/assets/html/mobile/home-mobile.html",
+		"/D/FREELAS/mservice/src/assets/html/mobile/__vitrine-mobile.html",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/enext-mobile-geral-mservice.scss",
+		"/C/Users/Vagner Santos/Downloads/senha",
+		"/D/FREELAS/mservice/src/assets/js/mobile/enext-mobile-categoria-mservice.js",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/enext-mobile-categoria-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/mobile/_smacss/base/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/layout/_generic.scss",
+		"/D/FREELAS/mservice/src/assets/html/desktop/__vitrine-desktop.html",
+		"/D/FREELAS/mservice/src/assets/js/enext-desktop-smart-mservice.js",
+		"/D/FREELAS/mservice/src/assets/html/desktop/categoria-desktop.html",
+		"/D/FREELAS/mservice/src/assets/js/enext-desktop-categoria-mservice.js",
+		"/D/FREELAS/bauduco/src/assets/js/enext-smart-research-bauducco.js",
+		"/D/FREELAS/mservice/src/assets/js/enext-desktop-geral-mservice.js",
+		"/D/FREELAS/mservice/src/assets/js/enext-desktop-home-mservice.js",
+		"/D/FREELAS/mservice/node_modules/grunt-contrib-watch/node_modules/tiny-lr/node_modules/debug/lib/debug.js",
+		"/D/FREELAS/bauduco/src/assets/js/enext-categoria-bauducco.js",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/base/_vars.scss",
+		"/D/FREELAS/bauduco/src/assets/js/enext-geral-bauducco.js",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/module/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/layout/_header.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/module/_minicart.scss",
+		"/D/FREELAS/mservice/src/assets/html/desktop/home-desktop.html",
+		"/D/FREELAS/bauduco/src/assets/html/desktop/categoria-desktop.html",
+		"/D/FREELAS/bauduco/src/assets/js/enext-produto-bauducco.js",
+		"/D/FREELAS/mservice/src/assets/js/enext-desktop-minicart-mservice.js",
+		"/D/FREELAS/mservice/src/assets/js/enext-desktop-produto-mservice.js",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/base/_mixins.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/_settings.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/_settings-reset.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/layout/_footer.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/module/_newsletter.scss",
+		"/D/FREELAS/mservice/src/assets/html/desktop/___controles.html",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/state/state.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/state/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/theme/_export.scss",
+		"/D/FREELAS/bauduco/src/assets/js/enext-minicart-bauducco.js",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-desktop-account-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/checkout-custom.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/base/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/base/_export-reset.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/_settings-checkout.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/base/_export-checkout.scss",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/base/_reset.scss",
+		"/D/FREELAS/mservice/Gruntfile.js",
+		"/D/FREELAS/bauduco/src/assets/scss/_config.scss",
+		"/D/FREELAS/mservice/.gitignore",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/_smacss/layout/_export.scss",
+		"/D/FREELAS/bauduco/src/assets/html/desktop/__footer.html",
+		"/D/FREELAS/mservice/src/assets/html/desktop/_newsletter.html",
+		"/D/FREELAS/bauduco/src/assets/html/desktop/home-desktop.html",
+		"/D/FREELAS/mservice/src/assets/scss/desktop/enext-produto-mservice.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/layout/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/layout/_footer.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/module/_vitrine.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/module/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/layout/_generic.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/_export.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/vars.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/mixins.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/_settings.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/reset.scss",
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/normalize.scss",
+		"/D/_PROJETOS/vagfsantos.github.io/package.json",
+		"/D/_PROJETOS/vagfsantos.github.io/assets/scss/modules/_geral.scss",
+		"/D/_PROJETOS/JavaScript-playground/Events/index.html",
+		"/D/_PROJETOS/JavaScript-playground/Events/style.css",
+		"/D/_PROJETOS/vagfsantos.github.io/assets/scss/main.scss",
+		"/D/_PROJETOS/vagfsantos.github.io/index.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"01dbee",
+			"staplesjeitocerto",
+			"www.linkedin.com/in/vagfsantos",
+			"https://br.linkedin.com/in/vagner-ferreira-santos-587260104",
+			"fnac",
+			"Fnac",
+			"fnac",
+			"kaueplussize",
+			"PacienteBuilder",
+			"is--all",
+			"m-category__main-banner",
+			"collapsed",
+			"},\n",
+			"sprite",
+			"t-flot-l",
+			"t-flot-r",
+			"m-footer__nav-link",
+			"colorLight",
+			"input",
+			"filtroDiv",
+			"console.log//",
+			"(/\\/",
+			"urlFiltro",
+			"x-infinityScroll",
+			"infinityScroll",
+			"pageLimit",
+			"mini",
+			";\n",
+			"30",
+			";\n",
+			".m-header__minicart",
+			"infoQtd",
+			"c-header__drop-menu-item",
+			"c-grid-banner__price",
+			";\n",
+			"\t\t\t\t\n",
+			"</div>",
+			"c-header__drop-menu-item",
+			"}\n",
+			"\n                                ",
+			"c-header__main-menu-item",
+			"uppercase",
+			"text-ri",
+			"text-lef",
+			"<a href=\"#\" class=\"c-header__institucional-nav-link is-link\">Corporativo</a>",
+			"grunt.loadNpmTasks('grunt-contrib-uglify');",
+			"');\n",
+			"fitloja",
+			"list"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tests/spec/TestSpec.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/Test.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tic-tac-toe.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 210.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
