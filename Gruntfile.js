@@ -59,7 +59,7 @@ module.exports = function(grunt){
 			},
 
 			scripts: {
-				files: 'src/js/src/**/*.js',
+				files: 'src/js/**/*.js',
 				tasks: ['concat', 'uglify', 'copy'],
 				options: {
 				  	event: ['added', 'deleted', 'changed'],
