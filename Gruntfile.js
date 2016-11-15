@@ -18,19 +18,19 @@ module.exports = function(grunt){
 
 		jasmine: {
 		    pivotal: {
-		      	src: 'src/js/src/**/*.js',
+		      	src: 'src/js/**/*.js',
 		      	options: {
-		        	specs: 'src/js/spec/*Spec.js',
-		        	helpers: 'src/js/spec/*Helper.js'
+		        	specs: 'tests/spec/*.js',
+		        	helpers: 'tests/helpers/*.js'
 		      	}
 		    }
 		},
 
 		concat: {
 		    dist: {
-	          	src: 'src/js/src/**/*.js',
+	          	src: 'src/js/**/*.js',
 	          	dest: 'build/js/app.js'
-		    },
+		    }
 		},
 
 		uglify: {
@@ -51,7 +51,7 @@ module.exports = function(grunt){
 
 		watch: {
 			test: {
-			    files: 'src/js/**/*.js',
+			    files: 'tests/**/*.js',
 			    tasks: ['jasmine'],
 			    options: {
 			      	event: ['added', 'deleted', 'changed'],
