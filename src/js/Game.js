@@ -1,13 +1,11 @@
 function Game(){
-	this.canvas = document.querySelect('#screen');
-	this.screen = this.canvas.getContext('2D');
+	this.startScreen = new StartScreen();
 }
 
 Game.prototype = {
 
-	setup: function(){
-		console.log(this.canvas);
-		console.log(this.screen);
+	init: function(){
+		this.startScreen.preload();
 	}
 
 }
