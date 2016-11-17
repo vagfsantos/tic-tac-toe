@@ -1,11 +1,14 @@
 function Game(){
-	this.startScreen = new StartScreen();
+	this.currentScreen = 0;
+	this.screens = [
+		new StartScreen()
+	]
 }
 
 Game.prototype = {
 
 	init: function(){
-		this.startScreen.preload();
+		this.screens[this.currentScreen].init();
 	}
 
 }

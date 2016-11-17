@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"UI",
+				"_UIElements"
+			],
+			[
+				"log",
+				"logoImg"
+			],
+			[
 				"scroll",
 				"scrollY"
 			],
@@ -147,25 +155,64 @@
 			"file": "src/index.html",
 			"settings":
 			{
-				"buffer_size": 545,
+				"buffer_size": 737,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "tests/spec/TestSpec.js",
+			"file": "src/js/app.js",
 			"settings":
 			{
-				"buffer_size": 100,
-				"encoding": "UTF-8",
+				"buffer_size": 58,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/Test.js",
+			"file": "src/js/Game.js",
 			"settings":
 			{
-				"buffer_size": 29,
+				"buffer_size": 133,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/UI.js",
+			"settings":
+			{
+				"buffer_size": 132,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/StartScreen.js",
+			"settings":
+			{
+				"buffer_size": 365,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/UIElement.js",
+			"settings":
+			{
+				"buffer_size": 65,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/Player.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/Events.js",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		}
@@ -209,11 +256,12 @@
 		"/D/_PROJETOS/tic-tac-toe",
 		"/D/_PROJETOS/tic-tac-toe/src",
 		"/D/_PROJETOS/tic-tac-toe/src/js",
-		"/D/_PROJETOS/tic-tac-toe/tests",
-		"/D/_PROJETOS/tic-tac-toe/tests/spec"
+		"/D/_PROJETOS/tic-tac-toe/tests"
 	],
 	"file_history":
 	[
+		"/D/_PROJETOS/tic-tac-toe/tests/spec/TestSpec.js",
+		"/D/_PROJETOS/tic-tac-toe/src/js/app.js",
 		"/D/_PROJETOS/tic-tac-toe/Gruntfile.js",
 		"/D/_PROJETOS/vagfsantos.github.io/Gruntfile.js",
 		"/D/_PROJETOS/tic-tac-toe/src/index.html",
@@ -339,9 +387,7 @@
 		"/D/_PROJETOS/vagfsantos.github.io/package.json",
 		"/D/_PROJETOS/vagfsantos.github.io/assets/scss/modules/_geral.scss",
 		"/D/_PROJETOS/JavaScript-playground/Events/index.html",
-		"/D/_PROJETOS/JavaScript-playground/Events/style.css",
-		"/D/_PROJETOS/vagfsantos.github.io/assets/scss/main.scss",
-		"/D/_PROJETOS/vagfsantos.github.io/index.html"
+		"/D/_PROJETOS/JavaScript-playground/Events/style.css"
 	],
 	"find":
 	{
@@ -425,7 +471,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -434,15 +480,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 545,
+						"buffer_size": 737,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
+								258,
+								258
 							]
 						],
 						"settings":
@@ -451,27 +497,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "tests/spec/TestSpec.js",
+					"file": "src/js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 100,
+						"buffer_size": 58,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								59,
-								59
+								58,
+								58
 							]
 						],
 						"settings":
@@ -482,24 +528,136 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/js/Test.js",
-					"semi_transient": true,
+					"file": "src/js/Game.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29,
+						"buffer_size": 133,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29,
-								29
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/js/UI.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								130,
+								130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/js/StartScreen.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/js/UIElement.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 65,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/js/Player.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -511,6 +669,34 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/js/Events.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
