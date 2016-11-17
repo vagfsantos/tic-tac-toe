@@ -14,11 +14,28 @@ UIElement.prototype.addImage = function(img){
 }
 
 UIElement.prototype.onload = function(callback){
-	return this.img.addEventListener('load', callback, false);
+	this.img.addEventListener('load', callback, false);
+}
+
+UIElement.prototype.addText = function(text, textFormat, color){
+	this.text = text;
+	this.textFormat = textFormat;
+	this.color = color;
+	this.type = 'text';
+
+	this.screen.font = this.textFormat;
+	this.infos = this.screen.measureText(text);
+	return this;
 }
 
 UIElement.prototype.render = function(){
 	if( this.type === 'img' ){
 		this.screen.drawImage(this.img, this.x, this.y);
+	}
+
+	if( this.type === 'text' ){
+		this.screen.font = this.textFormat;
+		this.screen.fillStyle = (this.color);
+		this.screen.fillText(this.text, this.x, this.y);
 	}
 }

@@ -1,14 +1,17 @@
 function Game(){
-	this.currentScreen = 0;
-	this.screens = [
-		new StartScreen()
-	]
+	this.interface = new UI();
 }
 
 Game.prototype = {
 
+	setup: function(){
+		this.interface.add( new StartInterface() );
+		return this;
+	},
+
 	init: function(){
-		this.screens[this.currentScreen].init();
+		this.interface.renderCurrentScreen();
+		return this;
 	}
 
 }
