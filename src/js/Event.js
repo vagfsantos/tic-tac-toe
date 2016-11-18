@@ -1,17 +1,41 @@
 function Event(){
-
+	this.eventables = [];
 }
 
 
-Event.prototype = new Game();
+Event.prototype = {
+	addEventables: function(UIElement){
+		this.eventables.push(UIElement);
+		return this;
+	},
 
+	onClick: function(eventData){
+		var x = eventData.offsetX;
+		var y = eventData.offsetY;
 
-Event.prototype.setup = function(){
-	this.clickListener();
-}
+		// looping throught eventables list
+		for (var i = this.eventables.length - 1; i >= 0; i--) {
+			var eventAreas = this.eventables[i].eventBox.eventAreas;
 
-Event.prototype.clickListener = function(){
-	this.interface.canvas.addEventListener('click', function(){
-		console.log('click canvas');
-	}, false);
+			for (var h = eventAreas.length - 1; h >= 0; h--) {
+				var boxX = eventAreas[h].x;
+				var boxY = eventAreas[h].y;
+				var boxOffsetWidth = boxX + eventAreas[h].width;
+				var boxOffsetHeight = boxY + eventAreas[h].height;
+
+				if( (x > boxX && x < boxOffsetWidth) && (y > boxY && y < boxOffsetHeight) ){
+					var events = this.eventables[i].eventBox.eventActions;
+					
+					// looping throught events on each eventable item
+					for (var j = events.length - 1; j >= 0; j--) {
+						if(events[j].type === 'click'){
+							events[j].action();
+						}
+					}
+
+					break;
+				}
+			}
+		}
+	}
 }

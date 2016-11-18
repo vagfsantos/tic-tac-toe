@@ -2,6 +2,7 @@ function UIElement(){
 	this.x = 0;
 	this.y = 0;
 	this.type = null;
+	this.eventBox = null;
 }
 
 UIElement.prototype = new UI();
@@ -36,6 +37,7 @@ UIElement.prototype.update = function(callback){
 }
 
 UIElement.prototype.render = function(){
+	this.eventBox.render();
 	if( this.type === 'img' ){
 		this.screen.drawImage(this.img, this.x, this.y);
 	}
