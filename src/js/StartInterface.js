@@ -38,17 +38,7 @@ StartInterface.prototype._preload = function(){
 
 // rendering current UI elements
 StartInterface.prototype.render = function(){
-	var _this = this;
-
-	this.clear().save();
-
 	for (var i = this.toRender.length - 1; i >= 0; i--) {
-		this.toRender[i].render();
+		this.toRender[i].update().render();
 	}
-	
-	this.restore();
-
-	window.requestAnimationFrame(function(){
-		_this.render();
-	});
 }

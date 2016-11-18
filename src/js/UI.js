@@ -35,7 +35,14 @@ UI.prototype = {
 	},
 
 	renderCurrentScreen: function(){
-		this.interfaces[this.currentInterface].setup().render();
-		return this;
+		var _this = this;
+
+		this.clear().save();
+		this.interfaces[this.currentInterface].render();
+		this.restore();
+
+		window.requestAnimationFrame(function(){
+			_this.renderCurrentScreen();
+		});
 	}
 }

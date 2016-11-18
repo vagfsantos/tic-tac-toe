@@ -28,6 +28,13 @@ UIElement.prototype.addText = function(text, textFormat, color){
 	return this;
 }
 
+UIElement.prototype.update = function(callback){
+	if( callback && typeof callback == 'function'){
+		callback.apply(this, []);
+	}
+	return this;
+}
+
 UIElement.prototype.render = function(){
 	if( this.type === 'img' ){
 		this.screen.drawImage(this.img, this.x, this.y);
