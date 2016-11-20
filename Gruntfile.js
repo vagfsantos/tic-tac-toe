@@ -35,13 +35,9 @@ module.exports = function(grunt){
 
 		uglify: {
 			build: {
-		      	files: [{
-		          	expand: true,
-		          	cwd: 'build/js/',
-		          	src: '**/*.js',
-		          	dest: 'build/js/',
-		          	ext: '.min.js'
-		      	}]
+		      	files: {
+		      		'build/js/app.min.js': ['build/js/app.js']
+		      	}
 		    }
 		},
 
@@ -77,5 +73,5 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-usemin');
 
-	grunt.registerTask('default', ['clean', 'copy',  'jasmine', 'usemin', 'uglify', 'concat', 'watch']);
+	grunt.registerTask('default', ['clean', 'copy',  'jasmine', 'usemin', 'concat', 'uglify', 'watch']);
 }
