@@ -37,7 +37,10 @@ UIElement.prototype.update = function(callback){
 }
 
 UIElement.prototype.render = function(){
-	this.eventBox.render();
+	if( this.eventBox ){
+		this.eventBox.render();
+	}
+
 	if( this.type === 'img' ){
 		this.screen.drawImage(this.img, this.x, this.y);
 	}
