@@ -26,12 +26,12 @@ StartInterface.prototype = {
 		var _this = this;
 
 		// setting up logo
-		this.logo = new UIElement();
+		this.logo = new UIElement(this.UI);
 		this.logo.addImage('img/logo.png').onload(function(){
 			_this.logo.x = (_this.UI.canvas.width / 2) - (_this.logo.img.width / 2);
 			_this.logo.y = 60;
 
-			_this.logo.eventBox = new EventBox(_this.logo);
+			_this.logo.eventBox = new EventBox(_this.UI, _this.logo);
 			_this.logo.eventBox
 				.addEventArea(_this.logo.x, _this.logo.y, _this.logo.img.width, _this.logo.img.height)
 				.addEventAction('click', function(){
@@ -46,17 +46,17 @@ StartInterface.prototype = {
 		
 
 		//setting up text start
-		this.startButton = new UIElement();
+		this.startButton = new UIElement(this.UI);
 		this.startButton.addText('Start', 'bold 58px chantal', this.colorLight);
 		this.startButton.x = (_this.UI.canvas.width / 2) - (this.startButton.infos.width / 2);
 		this.startButton.y = 360;
 
-		this.startButton.eventBox = new EventBox(this.startButton);
+		this.startButton.eventBox = new EventBox(this.UI, this.startButton);
 		this.startButton.eventBox
 			.addEventArea(this.startButton.x, this.startButton.y - 40, this.startButton.infos.width, 40)
 			.addEventAction('click', function(){
 				
-				_this.currentInterface++;
+				_this.UI.goToNextInterface();
 
 			});
 

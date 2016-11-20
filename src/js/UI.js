@@ -34,6 +34,12 @@ UI.prototype = {
 		return this;
 	},
 
+	goToNextInterface: function(){
+		if( this.interfaces[ this.currentInterface + 1 ] ){
+			this.currentInterface++;
+		}
+	},
+
 	renderCurrentScreen: function(){
 		var _this = this;
 

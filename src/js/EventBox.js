@@ -1,35 +1,34 @@
-function EventBox(UIElement){
+function EventBox(UI, UIElement){
+	this.UI = UI;
 	this.elem = UIElement;
 	this.eventAreas = [];
 	this.eventActions = [];
 }
 
+EventBox.prototype = {
+	addEventArea: function(x, y, width, height){
+		this.eventAreas.push({
+			x: x,
+			y: y,
+			width: width,
+			height: height
+		});
+		return this;
+	},
 
-EventBox.prototype =  new UI();
+	addEventAction: function(type, action){
+		this.eventActions.push({
+			type: type,
+			action: action
+		});
 
-EventBox.prototype.addEventArea = function(x, y, width, height){
-	this.eventAreas.push({
-		x: x,
-		y: y,
-		width: width,
-		height: height
-	});
-	return this;
-};
+		return this;
+	},
 
-
-EventBox.prototype.addEventAction = function(type, action){
-	this.eventActions.push({
-		type: type,
-		action: action
-	});
-
-	return this;
-};
-
-EventBox.prototype.render = function(){
-	for (var i = this.eventAreas.length - 1; i >= 0; i--) {
-		var area = this.eventAreas[i];
-		this.screen.fillRect(area.x, area.y, area.width, area.height);
+	render: function(){
+		for (var i = this.eventAreas.length - 1; i >= 0; i--) {
+			var area = this.eventAreas[i];
+			this.UI.screen.fillRect(area.x, area.y, area.width, area.height);
+		}
 	}
-};
+}
