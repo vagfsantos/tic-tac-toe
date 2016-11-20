@@ -47,7 +47,7 @@ StartInterface.prototype = {
 
 		//setting up text start
 		this.startButton = new UIElement(this.UI);
-		this.startButton.addText('Start', 'bold 58px chantal', this.colorLight);
+		this.startButton.addText('Start', 'bold 58px chantal', this.UI.colorLight);
 		this.startButton.x = (_this.UI.canvas.width / 2) - (this.startButton.infos.width / 2);
 		this.startButton.y = 360;
 

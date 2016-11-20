@@ -28,7 +28,8 @@ EventBox.prototype = {
 	render: function(){
 		for (var i = this.eventAreas.length - 1; i >= 0; i--) {
 			var area = this.eventAreas[i];
-			this.UI.screen.fillRect(area.x, area.y, area.width, area.height);
+			this.UI.screen.strokeStyle = '#0ff';
+			this.UI.screen.strokeRect(area.x, area.y, area.width, area.height);
 		}
 	}
 }
