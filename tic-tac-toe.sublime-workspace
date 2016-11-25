@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"S",
+				"screen"
+			],
+			[
 				"UI",
 				"UIElement"
 			],
@@ -183,7 +187,7 @@
 			"file": "src/index.html",
 			"settings":
 			{
-				"buffer_size": 899,
+				"buffer_size": 952,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -198,10 +202,10 @@
 			}
 		},
 		{
-			"file": "src/js/UIElement.js",
+			"file": "src/js/Game.js",
 			"settings":
 			{
-				"buffer_size": 1074,
+				"buffer_size": 372,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -210,25 +214,25 @@
 			"file": "src/js/UI.js",
 			"settings":
 			{
-				"buffer_size": 872,
+				"buffer_size": 995,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/EventBox.js",
+			"file": "src/js/UIElement.js",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 1065,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/StartInterface.js",
+			"file": "src/js/PickYourSideInterface.js",
 			"settings":
 			{
-				"buffer_size": 2169,
+				"buffer_size": 2067,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -280,18 +284,21 @@
 	"expanded_folders":
 	[
 		"/D/_PROJETOS/tic-tac-toe",
+		"/D/_PROJETOS/tic-tac-toe/build",
+		"/D/_PROJETOS/tic-tac-toe/build/js",
 		"/D/_PROJETOS/tic-tac-toe/src",
 		"/D/_PROJETOS/tic-tac-toe/src/js",
 		"/D/_PROJETOS/tic-tac-toe/tests"
 	],
 	"file_history":
 	[
+		"/D/_PROJETOS/tic-tac-toe/src/js/EventBox.js",
+		"/D/_PROJETOS/tic-tac-toe/Gruntfile.js",
 		"/D/_PROJETOS/tic-tac-toe/src/js/Game.js",
 		"/D/_PROJETOS/tic-tac-toe/src/js/Events.js",
 		"/D/_PROJETOS/tic-tac-toe/src/js/Player.js",
 		"/D/_PROJETOS/tic-tac-toe/tests/spec/TestSpec.js",
 		"/D/_PROJETOS/tic-tac-toe/src/js/app.js",
-		"/D/_PROJETOS/tic-tac-toe/Gruntfile.js",
 		"/D/_PROJETOS/vagfsantos.github.io/Gruntfile.js",
 		"/D/_PROJETOS/tic-tac-toe/src/index.html",
 		"/D/_PROJETOS/tic-tac-toe/src/js/src/Test2.js",
@@ -412,8 +419,7 @@
 		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/mixins.scss",
 		"/D/FREELAS/mservice/src/assets/scss/_smacss/_settings.scss",
 		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/reset.scss",
-		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/normalize.scss",
-		"/D/_PROJETOS/vagfsantos.github.io/package.json"
+		"/D/FREELAS/mservice/src/assets/scss/_smacss/base/normalize.scss"
 	],
 	"find":
 	{
@@ -431,6 +437,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"color",
+			"colorLight",
+			"UIElement",
+			"screen",
+			"topLevel",
 			"this.logo",
 			"startButton",
 			"this.startButton.eventBox\n\t\t.addEventArea(this.startButton.x, this.startButton.y - 40, this.startButton.infos.width, 40)\n\t\t.addEventAction('click', function(){\n\t\t\talert('cliquei em start');\n\t\t});",
@@ -504,7 +515,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -513,15 +524,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 899,
+						"buffer_size": 952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								400,
-								400
+								668,
+								668
 							]
 						],
 						"settings":
@@ -533,7 +544,7 @@
 						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -561,29 +572,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "src/js/UIElement.js",
+					"file": "src/js/Game.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1074,
+						"buffer_size": 372,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								89,
-								89
+								217,
+								217
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -598,7 +610,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 872,
+						"buffer_size": 995,
 						"regions":
 						{
 						},
@@ -617,24 +629,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/js/EventBox.js",
+					"file": "src/js/UIElement.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 1065,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								137,
-								137
+								976,
+								985
 							]
 						],
 						"settings":
@@ -642,27 +654,27 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "src/js/StartInterface.js",
+					"file": "src/js/PickYourSideInterface.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2169,
+						"buffer_size": 2067,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
+								9,
+								30
 							]
 						],
 						"settings":
@@ -673,7 +685,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{

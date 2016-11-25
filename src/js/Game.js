@@ -5,7 +5,9 @@ function Game(){
 Game.prototype = {
 
 	setup: function(){
-		this.interface.add( new StartInterface(this.interface) );
+		this.interface
+		.add( new StartInterface(this.interface) )
+		.add( new PickYourSideInterface(this.interface) );
 		return this;
 	},
 
