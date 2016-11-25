@@ -3,18 +3,16 @@ function Game(){
 }
 
 Game.prototype = {
-
 	setup: function(){
 		this.interface
-		.add( new StartInterface(this.interface) )
-		.add( new PickYourSideInterface(this.interface) );
+		.add( new Start(this.interface) )
+		.add( new PickYourSide(this.interface) );
 		return this;
 	},
 
 	init: function(){
-		this.interface.interfaces[this.interface.currentInterface].setup();
-		this.interface.renderCurrentScreen();
+		this.interface
+			.initScreen().renderCurrentScreen();
 		return this;
 	}
-
 }

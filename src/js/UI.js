@@ -14,7 +14,7 @@ function UI(){
 
 UI.prototype = {
 	add: function(screen){
-		console.dir(this.screen);
+		console.dir(screen);
 		this.interfaces.push( screen );
 		return this;
 	},
@@ -34,10 +34,16 @@ UI.prototype = {
 		return this;
 	},
 
+	initScreen: function(){
+		this.interfaces[ this.currentInterface ].setup();
+		return this;
+	},
+
 	goToNextInterface: function(){
 		if( this.interfaces[ this.currentInterface + 1 ] ){
 			this.currentInterface++;
 		}
+		return this;
 	},
 
 	renderCurrentScreen: function(){
