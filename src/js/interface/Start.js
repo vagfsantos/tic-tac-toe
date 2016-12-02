@@ -1,6 +1,6 @@
 var Start = (function(){
 	
-	var eventHandlerStart;
+	var eventsHandler = {};
 
 	function Start(UI){
 		this.UI = UI;
@@ -36,13 +36,21 @@ var Start = (function(){
 		this.startButton = new UIElement(this.UI);
 		this.startButton.addText('Start', 'bold 58px chantal', this.UI.colorLight);
 		this.startButton.x = (_this.UI.canvas.width / 2) - (this.startButton.infos.width / 2);
-		this.startButton.y = 360;
+		this.startButton.y = 400;
 
 		this.startButton.eventBox = new EventBox(this.UI, this.startButton);
 		this.startButton.eventBox
 			.addEventArea(this.startButton.x, this.startButton.y - 40, this.startButton.infos.width, 40)
-			.addEventAction('click', function(){
-				_this.UI.goToNextInterface().initScreen().clearEvent('click', eventHandlerStart);
+			.addEventAction({
+				click: function(){
+					_this.UI.goToNextInterface().initScreen()
+					.clearEvent('click', eventsHandler.click)
+					.clearEvent('mousemove', eventsHandler.mousemove);
+				},
+
+				mousemove: function(){
+					console.log('mouse over');
+				}
 			});
 
 		this.addEvent( new Event().addEventables(this.startButton) );
@@ -52,13 +60,21 @@ var Start = (function(){
 
 	Start.prototype.eventManager = function(){
 		var _this = this;
-		eventHandlerStart = function(event){
+
+		eventsHandler.click = function(event){
 			for (var i = _this.events.length - 1; i >= 0; i--) {
-				_this.events[i].onClick(event);
+				_this.events[i].onHit(event, 'click');
 			}
 		}
 
-		this.UI.canvas.addEventListener('click', eventHandlerStart, false);
+		eventsHandler.mousemove = function(event){
+			for (var i = _this.events.length - 1; i >= 0; i--) {
+				_this.events[i].onHit(event, 'mousemove');
+			}
+		}
+
+		this.UI.canvas.addEventListener('click', eventsHandler.click, false);
+		this.UI.canvas.addEventListener('mousemove', eventsHandler.mousemove, false);
 	}
 
 return Start;

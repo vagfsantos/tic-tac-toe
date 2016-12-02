@@ -16,9 +16,8 @@ EventBox.prototype = {
 		return this;
 	},
 
-	addEventAction: function(type, action){
+	addEventAction: function(action){
 		this.eventActions.push({
-			type: type,
 			action: action
 		});
 

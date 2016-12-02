@@ -34,6 +34,14 @@ UI.prototype = {
 		return this;
 	},
 
+	clearEvent: function(event, listener){
+		this.canvas.removeEventListener(event, listener, false);
+		console.log('Cleaning Event');
+		console.log(event);
+		console.log(listener);
+		return this;
+	},
+
 	initScreen: function(){
 		this.interfaces[ this.currentInterface ].setup();
 		return this;

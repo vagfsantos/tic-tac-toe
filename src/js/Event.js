@@ -9,7 +9,7 @@ Event.prototype = {
 		return this;
 	},
 
-	onClick: function(eventData){
+	onHit: function(eventData, eventType){
 		var x = eventData.offsetX;
 		var y = eventData.offsetY;
 
@@ -28,8 +28,8 @@ Event.prototype = {
 					
 					// looping throught events on each eventable item
 					for (var j = events.length - 1; j >= 0; j--) {
-						if(events[j].type === 'click'){
-							events[j].action();
+						if( events[j].action[eventType] ){
+							events[j].action[eventType]();
 						}
 					}
 
