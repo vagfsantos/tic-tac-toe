@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tic Tac Toe</title>
-	<script src="https://use.typekit.net/rri8jch.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<!-- <script src="https://use.typekit.net/rri8jch.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script> -->
 	<style>
 		body{
 			background-color: #205F8A;
@@ -17,28 +17,31 @@
 			left: 0; right: 0;
 			top: 0; bottom: 0;
 			margin: auto;
+			background-color: #165682;
 		}
 	</style>
 </head>
 <body>
 	
 	<canvas id="screen" width="800" height="500">
-		Your Browser don't support canvas.
+		Your Browser doesn't support canvas.
 	</canvas>
 	
 	<!-- build:js js/app.min.js -->
-	<script src="js/Game.js"></script>
-	<script src="js/UI.js"></script>
-	<script src="js/UIElement.js"></script>
-
 	<script src="js/model/Interface.js"></script>
-	
-	<script src="js/interface/Start.js"></script>
-	<script src="js/interface/PickYourSide.js"></script>
+	<script src="js/model/Player.js"></script>
+	<script src="js/model/EventBox.js"></script>
+	<script src="js/model/Event.js"></script>
 
-	<script src="js/Player.js"></script>
-	<script src="js/EventBox.js"></script>
-	<script src="js/Event.js"></script>
+	<script src="js/view/UI.js"></script>
+	<script src="js/view/UIElement.js"></script>
+	
+	<script src="js/view/interface/Start.js"></script>
+	<script src="js/view/interface/PickYourSide.js"></script>
+	<script src="js/view/interface/PlayGame.js"></script>
+
+	
+	<script src="js/controller/Game.js"></script>
 	<script src="js/app.js"></script>
 	<!-- endbuild -->
 </body>

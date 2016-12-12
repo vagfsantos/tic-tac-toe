@@ -34,7 +34,7 @@ var Start = (function(){
 
 		//setting up text start
 		this.startButton = new UIElement(this.UI);
-		this.startButton.addText('Start', 'bold 58px chantal', this.UI.colorLight);
+		this.startButton.addText('Start', 'bold 58px chantal', this.UI.colorMainLight);
 		this.startButton.x = (_this.UI.canvas.width / 2) - (this.startButton.infos.width / 2);
 		this.startButton.y = 400;
 
@@ -45,11 +45,6 @@ var Start = (function(){
 				click: function(){
 					_this.UI.goToNextInterface().initScreen()
 					.clearEvent('click', eventsHandler.click)
-					.clearEvent('mousemove', eventsHandler.mousemove);
-				},
-
-				mousemove: function(){
-					console.log('mouse over');
 				}
 			});
 
@@ -67,14 +62,7 @@ var Start = (function(){
 			}
 		}
 
-		eventsHandler.mousemove = function(event){
-			for (var i = _this.events.length - 1; i >= 0; i--) {
-				_this.events[i].onHit(event, 'mousemove');
-			}
-		}
-
 		this.UI.canvas.addEventListener('click', eventsHandler.click, false);
-		this.UI.canvas.addEventListener('mousemove', eventsHandler.mousemove, false);
 	}
 
 return Start;

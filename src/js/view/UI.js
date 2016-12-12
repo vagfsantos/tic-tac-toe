@@ -4,8 +4,10 @@ function UI(){
 	this.screen = this.canvas.getContext('2d');
 	
 	// color settings
-	this.mainColor = '#205F8A';
-	this.colorLight = '#A3D8C6';
+	this.colorMain = '#205F8A';
+	this.colorMainLight = '#A3D8C6';
+	this.colorLight = '#FFFFFF';
+	this.colorHighlight = '#FFDE17';
 
 	// Screens
 	this.currentInterface = 0;
@@ -14,7 +16,6 @@ function UI(){
 
 UI.prototype = {
 	add: function(screen){
-		console.dir(screen);
 		this.interfaces.push( screen );
 		return this;
 	},
@@ -36,9 +37,6 @@ UI.prototype = {
 
 	clearEvent: function(event, listener){
 		this.canvas.removeEventListener(event, listener, false);
-		console.log('Cleaning Event');
-		console.log(event);
-		console.log(listener);
 		return this;
 	},
 

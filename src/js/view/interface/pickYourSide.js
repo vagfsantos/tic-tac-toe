@@ -2,8 +2,9 @@ var PickYourSide = (function(){
 
 	var eventsHandler = {};
 
-	function PickYourSide(UI){
+	function PickYourSide(UI, Player){
 		this.UI = UI;
+		this.player = Player;
 		this.logo;
 	}
 
@@ -24,7 +25,7 @@ var PickYourSide = (function(){
 
 		// info text
 		this.infoText = new UIElement(this.UI);
-		this.infoText.addText('Pick Your Side', '38px chantal', this.UI.colorLight);
+		this.infoText.addText('Pick Your Side', '38px chantal', this.UI.colorMainLight);
 		this.infoText.x = (_this.UI.canvas.width / 2) - (this.infoText.infos.width / 2);
 		this.infoText.y = 300;
 
@@ -40,11 +41,10 @@ var PickYourSide = (function(){
 				.addEventArea(_this.btnX.x, _this.btnX.y, _this.btnX.img.width, _this.btnX.img.height)
 				.addEventAction({
 					click: function(){
-						alert('cliquei em X');
-					},
-
-					mousemove: function(){
-						_this.btnX.y = 300;
+						_this.player.setTeamAs('x');
+						
+						_this.UI.goToNextInterface().initScreen()
+								.clearEvent('click', eventsHandler.click)
 					}
 				});
 
@@ -66,7 +66,10 @@ var PickYourSide = (function(){
 				.addEventArea(_this.btnO.x, _this.btnO.y, _this.btnO.img.width, _this.btnO.img.height)
 				.addEventAction({
 					click: function(){
-						alert('cliquei em O');
+						_this.player.setTeamAs('o');
+						
+						_this.UI.goToNextInterface().initScreen()
+								.clearEvent('click', eventsHandler.click)
 					}
 				});
 
@@ -88,14 +91,7 @@ var PickYourSide = (function(){
 			}
 		}
 
-		eventsHandler.mousemove = function(event){
-			for (var i = _this.events.length - 1; i >= 0; i--) {
-				_this.events[i].onHit(event, 'mousemove');
-			}
-		}
-
 		this.UI.canvas.addEventListener('click', eventsHandler.click, false);
-		this.UI.canvas.addEventListener('mousemove', eventsHandler.mousemove, false);
 	};
 
 
