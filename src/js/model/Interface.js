@@ -15,8 +15,12 @@ Interface.prototype = {
 		return this;
 	},
 
-	addToRender: function(UIElem){
-		this.toRender.push(UIElem);
+	addToRender: function(){
+        var len = arguments.length;
+
+        for(var i = len - 1; i >= 0; i--)
+            this.toRender.push(arguments[i]);
+
 		return this;
 	},
 

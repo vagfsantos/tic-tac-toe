@@ -12,35 +12,41 @@ var Start = (function(){
 	Start.prototype.preload = function(){
 		var _this = this;
 
-		// setting up logo
-		this.logo = new UIElement(this.UI);
-		this.logo.addImage('img/logo.png').onload(function(){
-			_this.logo.x = (_this.UI.canvas.width / 2) - (_this.logo.img.width / 2);
-			_this.logo.y = 60;
+        // setting up logo image
+		var logo = new UIElement(this.UI);
+		logo.addImage('img/logo.png').onload(function(){
+			logo.x = (_this.UI.canvas.width / 2) - (logo.img.width / 2);
+			logo.y = 60;
 
-			_this.logo.eventBox = new EventBox(_this.UI, _this.logo);
-			_this.logo.eventBox
-				.addEventArea(_this.logo.x, _this.logo.y, _this.logo.img.width, _this.logo.img.height)
+			logo.eventBox = new EventBox(_this.UI, logo);
+			logo.eventBox
+				.addEventArea(logo.x, logo.y, logo.img.width, logo.img.height)
 				.addEventAction('click', function(){
 					alert('cliquei em img');
 				});
 
-			_this.addEvent( new Event().addEventables(_this.logo) );
+			_this.addEvent( new Event().addEventables(logo) );
 
 			// adding to UI Elements stack
-			_this.addToRender( _this.logo );
+			_this.addToRender( logo );
 		});
 		
 
 		//setting up text start
-		this.startButton = new UIElement(this.UI);
-		this.startButton.addText('Start', 'bold 58px chantal', this.UI.colorMainLight);
-		this.startButton.x = (_this.UI.canvas.width / 2) - (this.startButton.infos.width / 2);
-		this.startButton.y = 400;
+		var startButton = new UIElement(this.UI);
 
-		this.startButton.eventBox = new EventBox(this.UI, this.startButton);
-		this.startButton.eventBox
-			.addEventArea(this.startButton.x, this.startButton.y - 40, this.startButton.infos.width, 40)
+		startButton.addText({
+            text: 'Start',
+            textFormat: 'bold 58px chantal',
+            color: this.UI.colorMainLight
+        });
+
+		startButton.x = (_this.UI.canvas.width / 2) - (startButton.infos.width / 2);
+		startButton.y = 400;
+
+		startButton.eventBox = new EventBox(this.UI, startButton);
+		startButton.eventBox
+			.addEventArea(startButton.x, startButton.y - 40, startButton.infos.width, 40)
 			.addEventAction({
 				click: function(){
 					_this.UI.goToNextInterface().initScreen()
@@ -48,9 +54,9 @@ var Start = (function(){
 				}
 			});
 
-		this.addEvent( new Event().addEventables(this.startButton) );
+		this.addEvent( new Event().addEventables(startButton) );
 
-		this.addToRender(this.startButton);
+		this.addToRender(startButton);
 	};
 
 	Start.prototype.eventManager = function(){

@@ -25,41 +25,62 @@ var PlayGame = (function(){
 
 		// Title score
 		this.scoreTitle = new UIElement(this.UI);
-		this.scoreTitle.addText('Score', '43px chantal', this.UI.colorHighlight);
+		this.scoreTitle.addText({
+            text: 'Score',
+            textFormat: '43px chantal',
+            color: this.UI.colorHighlight
+        });
 		this.scoreTitle.x = 20;
 		this.scoreTitle.y = 230;
 
 		// Player points text
 		this.playerScoreText = new UIElement(this.UI);
-		this.playerScoreText.addText('You', '27px chantal', this.UI.colorLight);
+		this.playerScoreText.addText({
+            text: 'You',
+            textFormat: '27px chantal',
+            color: this.UI.colorLight
+        });
 		this.playerScoreText.x = 20;
 		this.playerScoreText.y = 285;
 
 		// Machine points text
 		this.machineScoreText = new UIElement(this.UI);
-		this.machineScoreText.addText('Machine', '27px chantal', this.UI.colorLight);
+		this.machineScoreText.addText({
+            text: 'Machine',
+            textFormat: '27px chantal',
+            color: this.UI.colorLight
+        });
 		this.machineScoreText.x = 20;
 		this.machineScoreText.y = 325;
 
 		// Level title text
 		this.levelTitleText = new UIElement(this.UI);
-		this.levelTitleText.addText('Level', '27px chantal Light', this.UI.colorLight);
+		this.levelTitleText.addText({
+            text: 'Level',
+            textFormat: '27px chantal Light',
+            color: this.UI.colorLight
+        });
 		this.levelTitleText.x = 20;
 		this.levelTitleText.y = 438;
 
 		// Level type text
 		this.levelTypeText = new UIElement(this.UI);
-		this.levelTypeText.addText('Normal', '35px chantal', this.UI.colorHighlight);
+		this.levelTypeText.addText({
+            text: 'Normal',
+            textFormat: '35px chantal',
+            color: this.UI.colorHighlight
+        });
 		this.levelTypeText.x = 20;
 		this.levelTypeText.y = 475;
 
 
-		this
-			.addToRender( this.scoreTitle )
-			.addToRender( this.playerScoreText )
-			.addToRender( this.machineScoreText )
-			.addToRender( this.levelTitleText )
-			.addToRender( this.levelTypeText );
+		this.addToRender(
+                this.scoreTitle,
+                this.playerScoreText,
+                this.machineScoreText,
+                this.levelTitleText,
+                this.levelTypeText
+            );
 	};
 
 	PlayGame.prototype.eventManager = function(){

@@ -8,25 +8,15 @@ function UIElement(UI){
 
 UIElement.prototype = {
 	addImage: function(img){
-		this.img = new Image();
-		this.img.src = img;
-		this.type = 'img';
-		return this;
+		return Util.createImage.apply(this, [img]);
 	},
 
 	onload: function(callback){
 		this.img.addEventListener('load', callback, false);
 	},
 
-	addText: function(text, textFormat, color){
-		this.text = text;
-		this.textFormat = textFormat;
-		this.color = color;
-		this.type = 'text';
-
-		this.UI.screen.font = this.textFormat;
-		this.infos = this.UI.screen.measureText(text);
-		return this;
+	addText: function(textArgs){
+		return Util.createText.apply(this, [textArgs]);
 	},
 
 	update: function(callback){

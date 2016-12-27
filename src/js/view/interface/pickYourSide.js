@@ -25,7 +25,11 @@ var PickYourSide = (function(){
 
 		// info text
 		this.infoText = new UIElement(this.UI);
-		this.infoText.addText('Pick Your Side', '38px chantal', this.UI.colorMainLight);
+		this.infoText.addText({
+            text: 'Pick Your Side',
+            textFormat: '38px chantal',
+            color: this.UI.colorMainLight
+        });
 		this.infoText.x = (_this.UI.canvas.width / 2) - (this.infoText.infos.width / 2);
 		this.infoText.y = 300;
 
