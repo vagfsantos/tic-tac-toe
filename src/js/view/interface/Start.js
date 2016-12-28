@@ -13,46 +13,57 @@ var Start = (function(){
 		var _this = this;
 
         // setting up logo image
-		var logo = new UIElement(this.UI);
-		logo.addImage('img/logo.png').onload(function(){
-			logo.x = (_this.UI.canvas.width / 2) - (logo.img.width / 2);
-			logo.y = 60;
+		var logo = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.imgSrc = 'img/logo.png',
+                this.type = 'img'
+            },
+            
+            onload: function(){
+                this.x = (_this.UI.canvas.width / 2) - (this.img.width / 2);
+                this.y = 60;
 
-			logo.eventBox = new EventBox(_this.UI, logo);
-			logo.eventBox
-				.addEventArea(logo.x, logo.y, logo.img.width, logo.img.height)
-				.addEventAction('click', function(){
-					alert('cliquei em img');
-				});
+                this.eventBox = new EventBox(_this.UI, this);
+                this.eventBox
+                    .addEventArea(this.x, this.y, this.img.width, this.img.height)
+                    .addEventAction({
+                        click: function(){
+                            alert('ok');
+                        }
+                    });
 
-			_this.addEvent( new Event().addEventables(logo) );
+                _this.addEvent( new Event().addEventables(this) );
 
-			// adding to UI Elements stack
-			_this.addToRender( logo );
-		});
-		
-
-		//setting up text start
-		var startButton = new UIElement(this.UI);
-
-		startButton.addText({
-            text: 'Start',
-            textFormat: 'bold 58px chantal',
-            color: this.UI.colorMainLight
+                // adding to UI Elements stack
+                _this.addToRender( this );
+            }
         });
-
-		startButton.x = (_this.UI.canvas.width / 2) - (startButton.infos.width / 2);
-		startButton.y = 400;
-
-		startButton.eventBox = new EventBox(this.UI, startButton);
-		startButton.eventBox
-			.addEventArea(startButton.x, startButton.y - 40, startButton.infos.width, 40)
-			.addEventAction({
-				click: function(){
-					_this.UI.goToNextInterface().initScreen()
-					.clearEvent('click', eventsHandler.click)
-				}
-			});
+        
+		//setting up text start
+		var startButton = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: 'Start',
+                    textFormat: 'bold 58px chantal',
+                    color: _this.UI.colorMainLight
+                }
+            },
+            onload: function(){
+                this.x = (_this.UI.canvas.width / 2) - (this.infos.width / 2),
+                this.y = 400
+            }
+        });
+        
+        startButton.eventBox = new EventBox(this.UI, startButton);
+        startButton.eventBox
+            .addEventArea(startButton.x, startButton.y - 40, startButton.infos.width, 40)
+            .addEventAction({
+                click: function(){
+                    _this.UI.goToNextInterface().initScreen()
+                    .clearEvent('click', eventsHandler.click)
+                }
+            });
 
 		this.addEvent( new Event().addEventables(startButton) );
 

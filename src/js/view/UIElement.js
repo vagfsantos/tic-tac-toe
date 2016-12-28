@@ -7,17 +7,23 @@ function UIElement(UI){
 }
 
 UIElement.prototype = {
-	addImage: function(img){
-		return Util.createImage.apply(this, [img]);
-	},
-
-	onload: function(callback){
-		this.img.addEventListener('load', callback, false);
-	},
-
-	addText: function(textArgs){
-		return Util.createText.apply(this, [textArgs]);
-	},
+    preload: function(){
+        var _this = this;
+        // start the configuration
+        if( this.setup ) this.setup();
+        
+        if( this.type == 'img' ){
+            UIElementUtil.createImage.apply(this, [this.imgSrc]);
+            this.img.addEventListener('load', function(){
+                _this.onload.apply(_this, []);
+            }, false);
+        }
+        
+        if( this.type == 'text' ){
+            UIElementUtil.createText.apply(this, [this.textSetup]);
+            if( this.onload ) this.onload();
+        }
+    },
 
 	update: function(callback){
 		if( callback && typeof callback == 'function'){

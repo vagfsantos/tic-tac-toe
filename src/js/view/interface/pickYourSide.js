@@ -13,77 +13,113 @@ var PickYourSide = (function(){
 	PickYourSide.prototype.preload = function(){
 		var _this = this;
 
-		// setting up logo
-		this.logo = new UIElement(this.UI);
-		this.logo.addImage('img/logo.png').onload(function(){
-			_this.logo.x = (_this.UI.canvas.width / 2) - (_this.logo.img.width / 2);
-			_this.logo.y = 60;
-			
-			// adding to UI Elements stack
-			_this.addToRender( _this.logo );
-		});
+		// setting up logo image
+		var logo = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.imgSrc = 'img/logo.png',
+                this.type = 'img'
+            },
+            
+            onload: function(){
+                this.x = (_this.UI.canvas.width / 2) - (this.img.width / 2);
+                this.y = 60;
 
-		// info text
-		this.infoText = new UIElement(this.UI);
-		this.infoText.addText({
-            text: 'Pick Your Side',
-            textFormat: '38px chantal',
-            color: this.UI.colorMainLight
+                this.eventBox = new EventBox(_this.UI, this);
+                this.eventBox
+                    .addEventArea(this.x, this.y, this.img.width, this.img.height)
+                    .addEventAction({
+                        click: function(){
+                            alert('ok screen 2');
+                        }
+                    });
+
+                _this.addEvent( new Event().addEventables(this) );
+
+                // adding to UI Elements stack
+                _this.addToRender( this );
+            }
         });
-		this.infoText.x = (_this.UI.canvas.width / 2) - (this.infoText.infos.width / 2);
-		this.infoText.y = 300;
+        
+        
+		// info text
+		var infoText = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text';
+                this.textSetup = {
+                    text: 'Pick Your Side',
+                    textFormat: '38px chantal',
+                    color: this.UI.colorMainLight
+                };
+            },
+            
+            onload: function(){
+                this.x = (_this.UI.canvas.width / 2) - (this.infos.width / 2);
+                this.y = 300;
+            }
+        });
+		
 
 		//x option
-		this.btnX = new UIElement(this.UI);
-		this.btnX.addImage('img/btn-x.png').onload(function(){
-			_this.btnX.x = (_this.UI.canvas.width / 2) - _this.btnX.img.width - 15;
-			_this.btnX.y = 330;
+		var btnX = UIElementUtil.createNewElement(this.UI,{
+            setup: function(){
+                this.imgSrc = 'img/btn-x.png';
+                this.type = 'img';
+            },
+            onload: function(){
+                this.x = (_this.UI.canvas.width / 2) - this.img.width - 15;
+                this.y = 330;
+                
+                this.eventBox = new EventBox(_this.UI, this);
+                this.eventBox
+                    .addEventArea(this.x, this.y, this.img.width, this.img.height)
+                    .addEventAction({
+                        click: function(){
+                            _this.player.setTeamAs('x');
 
-			// adding event
-			_this.btnX.eventBox = new EventBox(_this.UI, _this.btnX);
-			_this.btnX.eventBox
-				.addEventArea(_this.btnX.x, _this.btnX.y, _this.btnX.img.width, _this.btnX.img.height)
-				.addEventAction({
-					click: function(){
-						_this.player.setTeamAs('x');
-						
-						_this.UI.goToNextInterface().initScreen()
-								.clearEvent('click', eventsHandler.click)
-					}
-				});
+                            _this.UI.goToNextInterface().initScreen()
+                                    .clearEvent('click', eventsHandler.click)
+                        }
+                    });
 
-			_this.addEvent( new Event().addEventables(_this.btnX) );
-			
-			// adding to UI Elements stack
-			_this.addToRender( _this.btnX );
-		});
+                _this.addEvent( new Event().addEventables(this) );
+
+                // adding to UI Elements stack
+                _this.addToRender( this );
+            }
+        });
 
 		//O option
-		this.btnO = new UIElement(this.UI);
-		this.btnO.addImage('img/btn-o.png').onload(function(){
-			_this.btnO.x = (_this.UI.canvas.width / 2) + 15;
-			_this.btnO.y = 330;
+		var btnO = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.imgSrc = 'img/btn-o.png';
+                this.type = 'img';
+            },
+            
+            onload: function(){
+                this.x = (_this.UI.canvas.width / 2) + 15;
+			    this.y = 330;
+                
+                // adding event
+                this.eventBox = new EventBox(_this.UI, this);
+                this.eventBox
+                    .addEventArea(this.x, this.y, this.img.width, this.img.height)
+                    .addEventAction({
+                        click: function(){
+                            _this.player.setTeamAs('o');
 
-			// adding event
-			_this.btnO.eventBox = new EventBox(_this.UI, _this.btnO);
-			_this.btnO.eventBox
-				.addEventArea(_this.btnO.x, _this.btnO.y, _this.btnO.img.width, _this.btnO.img.height)
-				.addEventAction({
-					click: function(){
-						_this.player.setTeamAs('o');
-						
-						_this.UI.goToNextInterface().initScreen()
-								.clearEvent('click', eventsHandler.click)
-					}
-				});
+                            _this.UI.goToNextInterface().initScreen()
+                                    .clearEvent('click', eventsHandler.click)
+                        }
+                    });
 
-			_this.addEvent( new Event().addEventables(_this.btnO) );
-			
-			// adding to UI Elements stack
-			_this.addToRender( _this.btnO );
-		});
+                _this.addEvent( new Event().addEventables(this) );
 
-		this.addToRender(this.infoText);
+                // adding to UI Elements stack
+                _this.addToRender( this );
+            }
+        });
+
+		this.addToRender(infoText);
 	};
 
 	PickYourSide.prototype.eventManager = function(){

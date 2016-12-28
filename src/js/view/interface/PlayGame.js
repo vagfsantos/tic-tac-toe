@@ -14,72 +14,98 @@ var PlayGame = (function(){
 		var _this = this;
 
 		// setting up logo
-		this.logo = new UIElement(this.UI);
-		this.logo.addImage('img/playgame-logo.png').onload(function(){
-			_this.logo.x = 10;
-			_this.logo.y = 5;
-			
-			// adding to UI Elements stack
-			_this.addToRender( _this.logo );
-		});
+		var logo = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.imgSrc = 'img/playgame-logo.png',
+                this.type = 'img';
+                this.x = 10;
+                this.y = 5;
+            },
+            
+            onload: function(){
+                // adding to UI Elements stack
+                _this.addToRender( this );
+            }
+        });
 
 		// Title score
-		this.scoreTitle = new UIElement(this.UI);
-		this.scoreTitle.addText({
-            text: 'Score',
-            textFormat: '43px chantal',
-            color: this.UI.colorHighlight
+		var scoreTitle = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: 'Score',
+                    textFormat: '43px chantal',
+                    color: this.UI.colorHighlight
+                }
+                this.x = 20;
+                this.y = 230;
+            }
         });
-		this.scoreTitle.x = 20;
-		this.scoreTitle.y = 230;
+		
 
 		// Player points text
-		this.playerScoreText = new UIElement(this.UI);
-		this.playerScoreText.addText({
-            text: 'You',
-            textFormat: '27px chantal',
-            color: this.UI.colorLight
+		var playerScoreText = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: 'You',
+                    textFormat: '27px chantal',
+                    color: this.UI.colorLight
+                }
+                this.x = 20;
+                this.y = 285;
+            }
         });
-		this.playerScoreText.x = 20;
-		this.playerScoreText.y = 285;
+        
 
 		// Machine points text
-		this.machineScoreText = new UIElement(this.UI);
-		this.machineScoreText.addText({
-            text: 'Machine',
-            textFormat: '27px chantal',
-            color: this.UI.colorLight
+		var machineScoreText = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: 'Machine',
+                    textFormat: '27px chantal',
+                    color: this.UI.colorLight
+                }
+                this.x = 20;
+                this.y = 325;
+            }
         });
-		this.machineScoreText.x = 20;
-		this.machineScoreText.y = 325;
 
 		// Level title text
-		this.levelTitleText = new UIElement(this.UI);
-		this.levelTitleText.addText({
-            text: 'Level',
-            textFormat: '27px chantal Light',
-            color: this.UI.colorLight
+		var levelTitleText = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: 'Level',
+                    textFormat: '27px chantal Light',
+                    color: this.UI.colorLight
+                }
+                this.x = 20;
+                this.y = 438;
+            }
         });
-		this.levelTitleText.x = 20;
-		this.levelTitleText.y = 438;
 
 		// Level type text
-		this.levelTypeText = new UIElement(this.UI);
-		this.levelTypeText.addText({
-            text: 'Normal',
-            textFormat: '35px chantal',
-            color: this.UI.colorHighlight
+		var levelTypeText = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: 'Normal',
+                    textFormat: '35px chantal',
+                    color: this.UI.colorHighlight
+                }
+                this.x = 20;
+                this.y = 475;
+            }
         });
-		this.levelTypeText.x = 20;
-		this.levelTypeText.y = 475;
-
 
 		this.addToRender(
-                this.scoreTitle,
-                this.playerScoreText,
-                this.machineScoreText,
-                this.levelTitleText,
-                this.levelTypeText
+                scoreTitle,
+                playerScoreText,
+                machineScoreText,
+                levelTitleText,
+                levelTypeText
             );
 	};
 
