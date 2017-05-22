@@ -56,6 +56,19 @@ var PlayGame = (function(){
                 this.y = 285;
             }
         });
+		
+		var playerScorePoints = UIElementUtil.createNewElement(this.UI, {
+			setup: function(){
+				this.type = 'text';
+				this.textSetup = {
+					text: '0',
+					textFormat: '27px chantal',
+					color: this.UI.colorHighlight
+				},
+				this.x = 130,
+				this.y = 285
+			}
+		});
         
 
 		// Machine points text
@@ -71,6 +84,19 @@ var PlayGame = (function(){
                 this.y = 325;
             }
         });
+		
+		var machineScorePoints = UIElementUtil.createNewElement(this.UI, {
+			setup: function(){
+				this.type = 'text';
+				this.textSetup = {
+					text: '0',
+					textFormat: '27px chantal',
+					color: this.UI.colorHighlight
+				},
+				this.x = 130,
+				this.y = 325
+			}
+		});
 
 		// Level title text
 		var levelTitleText = UIElementUtil.createNewElement(this.UI, {
@@ -103,7 +129,9 @@ var PlayGame = (function(){
 		this.addToRender(
                 scoreTitle,
                 playerScoreText,
+				playerScorePoints,
                 machineScoreText,
+				machineScorePoints,
                 levelTitleText,
                 levelTypeText
             );
