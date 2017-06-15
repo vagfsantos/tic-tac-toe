@@ -57,6 +57,19 @@ var PlayGame = (function(){
                 this.y = 285;
             }
         });
+		
+		var playerScorePoints = UIElementUtil.createNewElement(this.UI, {
+			setup: function(){
+				this.type = 'text';
+				this.textSetup = {
+					text: '0',
+					textFormat: '27px chantal',
+					color: this.UI.colorHighlight
+				},
+				this.x = 130,
+				this.y = 285
+			}
+		});
         
         // Player points current Score
 		var playerScorePoints = UIElementUtil.createNewElement(this.UI, {
@@ -86,7 +99,7 @@ var PlayGame = (function(){
                 this.y = 325;
             }
         });
-        
+
         // Machine points current Score
 		var machineScorePoints = UIElementUtil.createNewElement(this.UI, {
             setup: function(){
@@ -138,7 +151,9 @@ var PlayGame = (function(){
                 playerScoreText,
                 playerScorePoints,
                 machineScorePoints,
+				playerScorePoints,
                 machineScoreText,
+				machineScorePoints,
                 levelTitleText,
                 levelTypeText
             );
