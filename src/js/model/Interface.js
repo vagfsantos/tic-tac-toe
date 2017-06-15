@@ -26,7 +26,10 @@ Interface.prototype = {
 
 	render: function(){
 		for (var i = this.toRender.length - 1; i >= 0; i--) {
-			this.toRender[i].update().render();
+			if(this.toRender[i].update){
+                this.toRender[i].update()
+            }
+            this.toRender[i].render();
 		}
 	}
 }

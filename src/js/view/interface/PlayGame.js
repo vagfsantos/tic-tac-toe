@@ -2,9 +2,10 @@ var PlayGame = (function(){
 
 	var eventsHandler = {};
 
-	function PlayGame(UI, Player){
+	function PlayGame(UI, Player, PlayerMachine){
 		this.UI = UI;
 		this.player = Player;
+		this.PlayerMachine = PlayerMachine;
 		this.logo;
 	}
 
@@ -57,6 +58,20 @@ var PlayGame = (function(){
             }
         });
         
+        // Player points current Score
+		var playerScorePoints = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: '0',
+                    textFormat: '45px chantal',
+                    color: this.UI.colorMainLight
+                }
+                this.x = 150;
+                this.y = 290;
+            }
+        });
+        
 
 		// Machine points text
 		var machineScoreText = UIElementUtil.createNewElement(this.UI, {
@@ -69,6 +84,24 @@ var PlayGame = (function(){
                 }
                 this.x = 20;
                 this.y = 325;
+            }
+        });
+        
+        // Machine points current Score
+		var machineScorePoints = UIElementUtil.createNewElement(this.UI, {
+            setup: function(){
+                this.type = 'text',
+                this.textSetup =  {
+                    text: '0',
+                    textFormat: '45px chantal',
+                    color: this.UI.colorMainLight
+                }
+                this.x = 150;
+                this.y = 330;
+            },
+            
+            update: function(){
+                this.setText(_this.PlayerMachine.getScore());
             }
         });
 
@@ -103,6 +136,8 @@ var PlayGame = (function(){
 		this.addToRender(
                 scoreTitle,
                 playerScoreText,
+                playerScorePoints,
+                machineScorePoints,
                 machineScoreText,
                 levelTitleText,
                 levelTypeText

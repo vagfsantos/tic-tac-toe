@@ -2,9 +2,10 @@ var PickYourSide = (function(){
 
 	var eventsHandler = {};
 
-	function PickYourSide(UI, Player){
+	function PickYourSide(UI, Player, PlayerMachine){
 		this.UI = UI;
 		this.player = Player;
+		this.PlayerMachine = PlayerMachine;
 		this.logo;
 	}
 
@@ -74,7 +75,8 @@ var PickYourSide = (function(){
                     .addEventArea(this.x, this.y, this.img.width, this.img.height)
                     .addEventAction({
                         click: function(){
-                            _this.player.setTeamAs('x');
+                            _this.player.setTeam('x');
+                            _this.PlayerMachine.setTeam('o');
 
                             _this.UI.goToNextInterface().initScreen()
                                     .clearEvent('click', eventsHandler.click)
@@ -105,8 +107,9 @@ var PickYourSide = (function(){
                     .addEventArea(this.x, this.y, this.img.width, this.img.height)
                     .addEventAction({
                         click: function(){
-                            _this.player.setTeamAs('o');
-
+                            _this.player.setTeam('o');
+                            _this.PlayerMachine.setTeam('x');
+                            
                             _this.UI.goToNextInterface().initScreen()
                                     .clearEvent('click', eventsHandler.click)
                         }

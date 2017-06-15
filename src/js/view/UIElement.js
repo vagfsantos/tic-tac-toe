@@ -24,13 +24,12 @@ UIElement.prototype = {
             if( this.onload ) this.onload();
         }
     },
+    
+    setText: function(text){
+        this.text = text;
+    },
 
-	update: function(callback){
-		if( callback && typeof callback == 'function'){
-			callback.apply(this, []);
-		}
-		return this;
-	},
+	update: null,
 
 	render: function(){
 		if( this.eventBox ){
